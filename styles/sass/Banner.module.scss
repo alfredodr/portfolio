@@ -1,0 +1,72 @@
+@import "_variables.scss";
+
+.intro_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.inner_intro_container{
+    position: absolute;
+    top: 5rem;
+    border: 3rem double $lightgray;
+    z-index: -1;
+}
+
+.first_name,
+.last_name{
+    font-size: 3em;
+}
+
+.first_name{
+    color:$white;
+    text-shadow: 1px 1px 5px $black;
+}
+
+.last_name{
+    text-shadow: 1px 1px 5px $lightgray;
+}
+
+.description{
+    font-size: 1.5rem;
+}
+
+.icons_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+
+.icon{
+    color:$black;
+    font-size: 3em;
+}
+
+/*mobile responsive*/
+@media (max-width: 40rem){
+    .inner_intro_container{       
+        width: 60vw;
+        height: 85vh;
+        left: 8rem;
+    }
+
+    .first_name,
+    .last_name{
+    font-size: 3em;
+    }   
+}
+
+/*desktop responsive*/
+@media (min-width: 40rem){
+    .inner_intro_container{
+        width: 55vw;
+        height: 85vh;
+        right: 15rem;
+    }
+
+    .first_name,
+    .last_name{
+    font-size: 5em;
+    }
+}

@@ -1,0 +1,29 @@
+@import "_variables.scss";
+
+.footer_text{
+    color:$white;
+}
+
+.footer_container{
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 4rem;
+}
+
+/*mobile responsive*/
+@media (max-width: 40rem){
+    .footer_container{
+        flex-direction: column;
+    }
+}
+
+
+/*desktop responsive*/
+@media (min-width: 40rem){
+    .footer_container{
+        flex-direction: row;
+    }
+}

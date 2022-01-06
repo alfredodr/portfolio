@@ -1,0 +1,40 @@
+@import "_typography.scss";
+@import "_variables.scss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+/*mobile responsive*/
+@media (max-width: 40rem){
+  main{
+    width: 90%;
+    margin: auto;  
+  } 
+}
+
+/*desktop responsive*/
+@media (min-width: 40rem){
+  main{
+    width: 70%;
+    margin: auto;  
+  }
+}
