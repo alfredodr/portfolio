@@ -10,6 +10,15 @@
     margin: 1rem;
 }
 
+.nav__item:hover{
+    text-decoration: underline;
+    text-underline-position: under;
+
+    @supports(text-decoration-thickness: 0.15rem){
+    text-decoration-thickness: 0.15rem;
+    }
+}
+
 .bar {
     display: block;
     width: 2rem;
