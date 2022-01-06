@@ -8,8 +8,7 @@ const Banner = () => {
   return (
     <>
       <div className={styles.intro_container}>
-        <span className={styles.inner_intro_container}>
-        </span>
+        <span className={styles.rectangle}></span>
         <h1 className={styles.first_name}>Alfredo</h1>
         <h2 className={styles.last_name}>Dominguez</h2>
         <span className={styles.description}>Web Developer</span>

@@ -5,11 +5,15 @@
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    position: relative;
 }
 
-.inner_intro_container{
+.rectangle{
     position: absolute;
-    top: 5rem;
+    width: 64vw;
+    height: 88vh;
+    left: 4rem;
+    bottom:5rem;
     border: 3rem double $lightgray;
     z-index: -1;
 }
@@ -45,12 +49,6 @@
 
 /*mobile responsive*/
 @media (max-width: 40rem){
-    .inner_intro_container{       
-        width: 60vw;
-        height: 85vh;
-        left: 8rem;
-    }
-
     .first_name,
     .last_name{
     font-size: 3em;
@@ -59,12 +57,6 @@
 
 /*desktop responsive*/
 @media (min-width: 40rem){
-    .inner_intro_container{
-        width: 55vw;
-        height: 85vh;
-        right: 15rem;
-    }
-
     .first_name,
     .last_name{
     font-size: 5em;
