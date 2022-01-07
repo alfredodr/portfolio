@@ -74,14 +74,9 @@
 
 .detail1,
 .detail2{
-    opacity: 0;
     position: absolute;
-    bottom:1.6rem;
-    width: 50%;
-    height: 15%;
     background-color: $black;
     color: $white;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,17 +84,7 @@
     border-radius: 0px 0px 40px 40px;
 }
 
-.project1:hover{
-    .detail1{
-        opacity: 1;
-    } 
-}
 
-.project2:hover{
-    .detail2{
-        opacity: 1;
-    } 
-}
 
 /*mobile responsive*/
 @media (max-width: 40rem){
@@ -107,6 +92,21 @@
         .projects_container{
             grid-template-columns: 100%;
         }
+    }
+
+    .detail1,
+    .detail2{
+        width: 100%;
+        height: 5%;
+    }
+
+    .detail1{
+        top: 12.5rem;
+    }
+
+    
+    .detail2{
+        bottom: 3rem;
     }
 }
 
@@ -116,5 +116,26 @@
         .projects_container{
             grid-template-columns: repeat(2, 50%);
         }
+    }
+
+    .detail1,
+    .detail2{   
+        opacity: 0; 
+        width: 50%;
+        height: 15%;
+        bottom:1.6rem;
+        
+    }
+
+    .project1:hover{
+        .detail1{
+            opacity: 1;
+        } 
+    }
+    
+    .project2:hover{
+        .detail2{
+            opacity: 1;
+        } 
     }
 }

@@ -5,8 +5,8 @@ const About = () => {
   return (
     <>
       <h2 className={styles.about_container}>
-        About
-        <span className={styles.about_inner}>About</span>
+        ABOUT
+        <span className={styles.about_inner}>ABOUT</span>
       </h2>
       <hr className={styles.line_break} />
       <p className={styles.description}>I am a Web Developer with over 6 months of experience as a freelancer. I am passionate about my work every step of the way.

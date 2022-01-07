@@ -7,8 +7,8 @@ const index = () => {
   return (
     <div>
       <h2 className={styles.intro_container}>
-        Projects
-        <span className={styles.intro_inner}>Projects</span>
+        PROJECTS
+        <span className={styles.intro_inner}>PROJECTS</span>
       </h2>
       <hr className={styles.line_break} />
       <div className={styles.projects_container}>

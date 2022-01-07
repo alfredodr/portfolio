@@ -9,8 +9,8 @@ const Banner = () => {
     <>
       <div className={styles.intro_container}>
         <span className={styles.rectangle}></span>
-        <h1 className={styles.first_name}>Alfredo</h1>
-        <h2 className={styles.last_name}>Dominguez</h2>
+        <h1 className={styles.first_name}>ALFREDO</h1>
+        <h2 className={styles.last_name}>DOMINGUEZ</h2>
         <span className={styles.description}>Web Developer</span>
         <div className={styles.icons_container}>
           <Link href="https://github.com/alfredodr" ><GitHubIcon className={styles.icon} /></Link>
