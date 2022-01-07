@@ -11,9 +11,11 @@ const index = () => {
         <span className={styles.intro_inner}>Projects</span>
       </h2>
       <hr className={styles.line_break} />
-      {projects.map((project) => (
-        <Project key={project.id} data={project} />
-      ))}
+      <div className={styles.projects_container}>
+        {projects.map((project) => (
+          <Project key={project.id} data={project} />
+        ))}
+      </div>
       <button className={styles.about_button_container}>
         <VisibilityIcon className={styles.view_icon} />
         <a className={styles.view_text} href="https://github.com/alfredodr">View All</a>

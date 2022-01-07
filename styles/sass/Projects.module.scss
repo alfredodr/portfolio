@@ -47,12 +47,74 @@
     color: $white;
 }
 
-.image{
+.image1,
+.image2{
     object-position: center;
+    border-radius: 50px;
+    border: 1px solid $lightgray !important;
+}
+
+.description{
+    margin-top  : 5rem;
 }
 
 @supports(display: grid){
     .projects_container{
         display: grid;
+        grid-gap: 2rem;
+        position: relative; 
+    }
+}
+
+.project1,
+.project2{
+    z-index: 1;
+    overflow: hidden;
+}
+
+.detail1,
+.detail2{
+    opacity: 0;
+    position: absolute;
+    bottom:1.6rem;
+    width: 50%;
+    height: 15%;
+    background-color: $black;
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 40px 40px;
+}
+
+.project1:hover{
+    .detail1{
+        opacity: 1;
+    } 
+}
+
+.project2:hover{
+    .detail2{
+        opacity: 1;
+    } 
+}
+
+/*mobile responsive*/
+@media (max-width: 40rem){
+    @supports(display: grid){
+        .projects_container{
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+/*desktop responsive*/
+@media (min-width: 40rem){
+    @supports(display: grid){
+        .projects_container{
+            grid-template-columns: repeat(2, 50%);
+        }
     }
 }
