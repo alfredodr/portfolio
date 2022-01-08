@@ -1,7 +1,7 @@
 import Project from "./Project";
 import { projects } from "../../../lib/projects";
 import styles from "../../../styles/sass/Projects.module.scss";
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 
 const index = () => {
   return (
@@ -17,7 +17,7 @@ const index = () => {
         ))}
       </div>
       <button className={styles.about_button_container}>
-        <VisibilityIcon className={styles.view_icon} />
+        <VisibilityOutlinedIcon className={styles.view_icon} />
         <a className={styles.view_text} href="https://github.com/alfredodr">View All</a>
       </button>
     </div>

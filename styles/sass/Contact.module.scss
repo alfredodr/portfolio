@@ -1,0 +1,109 @@
+@import "_variables.scss";
+
+.intro_container{
+    position:relative;
+    font-size: 2rem;
+    margin-top: 5rem;
+}
+
+.intro_inner{
+    font-size: 6rem;
+    color:$white;
+    text-shadow: 2px 2px 6px $lightgray;
+    position: absolute;
+    bottom:-2rem;
+    left:0;
+    z-index: -1;    
+}
+
+.intro{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.input,
+.message,
+.submit_container,
+.reset_container{
+    margin: 0.5rem 0;
+}
+
+.input,
+.submit_container,
+.reset_container{
+    height: 3rem;
+}
+
+.message{
+    height: 10rem;
+}
+
+
+.input,
+.message{
+    width: 100%;
+}
+
+.submit_container,
+.reset_container{
+    width: 10rem;
+    background-color: $black;
+    color: $white;
+}
+
+.submit_container,
+.reset_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $black;
+    font-size: 1rem;
+    border-radius: 3.125rem;
+    width: 10rem;
+    height: 3rem;
+    margin: 2rem 0;
+}
+
+
+.submit_container:hover,
+.reset_container:hover{
+    background-color: $white;
+    color: $black;
+    cursor: pointer;
+    .done_icon,
+    .submit_text,
+    .reset_icon,
+    .reset_text{
+        color: $black;
+    }
+}
+
+.done_icon,
+.submit_text,
+.reset_icon,
+.reset_text{
+    color: $white;
+}
+
+
+/*mobile responsive*/
+@media (max-width: 40rem){
+    .form_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*desktop responsive*/
+@media (min-width: 40rem){
+    .buttons_container{
+        display: flex;
+    }
+
+    .reset_container{
+        margin-left: 1rem;
+    }
+}
