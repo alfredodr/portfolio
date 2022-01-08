@@ -66,6 +66,12 @@
     }
 }
 
+.projects_container:hover,
+.detail1:hover,
+.detail2:hover{
+    cursor: pointer;
+}
+
 .project1,
 .project2{
     z-index: 1;

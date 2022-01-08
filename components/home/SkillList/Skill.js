@@ -9,8 +9,8 @@ const Skill = ({ data }) => {
       <Image
         className={styles.image} src={icon} placeholder="blur" blurDataURL={"/blank.jpg"}
         alt="Skills"
-        width="50px"
-        height="50px" />
+        width="60px"
+        height="60px" />
     </div>
   );
 };

@@ -24,18 +24,28 @@
 @supports(display: grid){
     .skills_container{
         display: grid;
-        grid-gap: 2rem;
+        align-items: center;
+        justify-content: center;
         position: relative; 
-        grid-template-columns: repeat(4, 20%)
     }
 }
 
 /*mobile responsive*/
 @media (max-width: 40rem){
-
+    @supports(display: grid){
+        .skills_container{
+            grid-template-columns: repeat(2, 20%);
+            grid-gap: 6rem;
+        }
+    }
 }
 
 /*desktop responsive*/
 @media (min-width: 40rem){
-
+    @supports(display: grid){
+        .skills_container{
+            grid-template-columns: repeat(4, 20%);
+            grid-gap: 4rem;
+        }
+    }
 }
