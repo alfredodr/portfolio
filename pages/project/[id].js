@@ -9,3 +9,5 @@ function project() {
 }
 
 export default project;
+
+//here use getStaticPath and getStaticProp to get the data

@@ -16,6 +16,8 @@ export default function Home() {
         <title>Alfredo Dominguez</title>
         <meta name="Alfredo Dominguez " content="Web Developer" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"/>
       </Head>
       <Banner />
       <About />

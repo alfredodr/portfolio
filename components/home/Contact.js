@@ -2,8 +2,8 @@ import styles from "../../styles/sass/Contact.module.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import ClearIcon from '@mui/icons-material/Clear';
+import { MdDoneOutline } from "react-icons/md"; 
+import { MdClear } from "react-icons/md";
 
 const schema = yup.object().shape({
   fullName: yup.string().required("Full Name is required"),
@@ -67,12 +67,12 @@ const Contact = () => {
 
           <div className={styles.buttons_container}>
              <button type="submit" className={styles.submit_container}>
-              <CheckCircleOutlineIcon className={styles.done_icon} />
+              <MdDoneOutline className={styles.done_icon} />
               <span className={styles.submit_text}>Submit</span>
             </button> 
 
             <button type="reset" className={styles.reset_container}>
-              <ClearIcon className={styles.clear_icon} />
+              <MdClear className={styles.clear_icon} size="1.2rem" />
               <span className={styles.reset_text} onClick={schema.clear}>Reset</span>
             </button> 
           </div>

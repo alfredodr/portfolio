@@ -1,5 +1,5 @@
 import styles from "../../styles/sass/About.module.scss";
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import { AiOutlineEye } from "react-icons/ai";
 
 const About = () => {
   return (
@@ -14,7 +14,7 @@ const About = () => {
         learning and improving my skills every day
       </p>
       <button className={styles.about_button_container}>
-        <VisibilityIcon className={styles.view_icon} />
+        <AiOutlineEye className={styles.view_icon} size= "1.4rem"/>
         <a className={styles.view_text} href="https://drive.google.com/file/d/1kpBVbRzUqZuGxGX-NuMQABxil3bdU_gS/view?usp=sharing">View CV</a>
       </button>
     </>
