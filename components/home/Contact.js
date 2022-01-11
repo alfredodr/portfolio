@@ -33,37 +33,37 @@ const Contact = () => {
             type="text"
             name="fullName"
             {...register('fullName')}
-            placeholder="Full Name..."
+            placeholder="  Full Name..."
             className={styles.input}
           />
-          <p> {errors.fullName?.message} </p>
+          <p className={styles.error}> {errors.fullName?.message} </p>
 
           <input
             type="text"
             name="email"
             {...register('email')}
-            placeholder="Email Address..."
+            placeholder="  Email Address..."
             className={styles.input}
           />
-          <p> {errors.email?.message} </p>
+          <p className={styles.error}> {errors.email?.message} </p>
 
           <input
             type="text"
             name="subject"
             {...register('subject')}
-            placeholder="Subject..."
+            placeholder="  Subject..."
             className={styles.input}
           />
-          <p> {errors.subject?.message} </p>
+          <p className={styles.error}> {errors.subject?.message} </p>
 
           <textarea
             id="message"
             name="message"
             {...register('message')}
             className={styles.message}
-            placeholder="Your Message..."
+            placeholder="  Your Message..."
           />
-          <p> {errors.message?.message} </p>
+          <p className={styles.error}> {errors.message?.message} </p>
 
           <div className={styles.buttons_container}>
              <button type="submit" className={styles.submit_container}>

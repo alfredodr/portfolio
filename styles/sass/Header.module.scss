@@ -11,6 +11,7 @@
     background-color: $white;
     border-bottom: 0.1rem solid $lightgray;
     height: 5rem;
+    width: 100%;
 }
 
 .brand{
@@ -47,11 +48,6 @@
 
 /*mobile responsive*/
 @media (max-width: 40rem){
-    .header_container{
-        width: 70%;
-        margin: auto; 
-    }
-
     .nav_container{
         display:none;
     }
@@ -97,10 +93,6 @@
 
 /*desktop responsive*/
 @media (min-width: 40rem){
-    .header_container{
-        width: 100%;
-    }
-
     .menu_container{
         display: flex;
         flex-direction: row;

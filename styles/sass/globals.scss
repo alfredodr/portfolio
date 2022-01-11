@@ -16,7 +16,6 @@ body {
 }
 
 main{
-  width: 70%;
   margin: auto;  
 }
 
@@ -29,3 +28,16 @@ li{
   list-style: none;
 }
 
+/*mobile responsive*/
+@media (max-width: 40rem){
+  main{
+    width: 90%;
+  }
+}
+
+/*desktop responsive*/
+@media (min-width: 40rem){
+  main{
+    width: 70%;
+  }
+}
