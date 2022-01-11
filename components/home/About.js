@@ -1,5 +1,7 @@
 import styles from "../../styles/sass/About.module.scss";
-import { AiOutlineEye } from "react-icons/ai";
+
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
 
 const About = () => {
   return (
@@ -13,10 +15,10 @@ const About = () => {
         My goal is to grow businesses and offer my clients the best results. I like to stay up to date with the industry trends and continue
         learning and improving my skills every day
       </p>
-      <button className={styles.about_button_container}>
-        <AiOutlineEye className={styles.view_icon} size= "1.4rem"/>
-        <a className={styles.view_text} href="https://drive.google.com/file/d/1kpBVbRzUqZuGxGX-NuMQABxil3bdU_gS/view?usp=sharing">View CV</a>
-      </button>
+      <div className={styles.icons_container}>
+        <a href="https://github.com/alfredodr" ><AiFillGithub className={styles.icon} /></a>
+        <a href="https://www.linkedin.com/in/alfredodominguez1"><AiFillLinkedin className={styles.icon} /></a>
+      </div>
     </>
   )
 };

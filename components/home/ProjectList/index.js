@@ -6,7 +6,7 @@ import { AiOutlineEye } from "react-icons/ai";
 const index = () => {
   return (
     <div>
-      <h2 className={styles.intro_container}>
+      <h2 id={styles.intro_container}>
         PROJECTS
         <span className={styles.intro_inner}>PROJECTS</span>
       </h2>
@@ -17,7 +17,7 @@ const index = () => {
         ))}
       </div>
       <button className={styles.about_button_container}>
-        <AiOutlineEye className={styles.view_icon} size= "1.4rem"/>
+        <AiOutlineEye className={styles.view_icon} size="1.4rem" />
         <a className={styles.view_text} href="https://github.com/alfredodr">View All</a>
       </button>
     </div>
