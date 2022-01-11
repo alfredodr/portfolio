@@ -15,7 +15,7 @@ const Banner = () => {
         <span className={styles.description}>Web Developer</span>
         <button className={styles.project_button_container}>
           <AiOutlineEye className={styles.view_icon} size="1.4rem" />
-          <a className={styles.view_text} href={styles.intro_container}>View Projects</a>
+          <a className={styles.view_text} href="#projects">View Projects</a>
         </button>
       </div>
     </>

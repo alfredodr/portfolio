@@ -1,7 +1,7 @@
 import styles from "../../styles/sass/About.module.scss";
-
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const About = () => {
   return (
@@ -16,8 +16,9 @@ const About = () => {
         learning and improving my skills every day
       </p>
       <div className={styles.icons_container}>
-        <a href="https://github.com/alfredodr" ><AiFillGithub className={styles.icon} /></a>
-        <a href="https://www.linkedin.com/in/alfredodominguez1"><AiFillLinkedin className={styles.icon} /></a>
+        <a href="https://github.com/alfredodr" ><AiFillGithub className={styles.icon} />Github</a>
+        <a href="https://www.linkedin.com/in/alfredodominguez1"><AiFillLinkedin className={styles.icon} />Linkedin</a>
+        <a href="https://drive.google.com/file/d/1kpBVbRzUqZuGxGX-NuMQABxil3bdU_gS/view?usp=sharing"><BsFillPersonLinesFill className={styles.icon} />Resume</a>
       </div>
     </>
   )
