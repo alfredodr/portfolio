@@ -23,11 +23,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    line-height: 7rem;
 }
 
 .description{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-top: 0.5rem;
 }
 
 .project_button_container{
@@ -59,13 +59,15 @@
 /*mobile responsive*/
 @media (max-width: 40rem){
     .name_container{
-    font-size: 3em;
+        font-size: 3em;
+        line-height: 4rem;
     }   
 }
 
 /*desktop responsive*/
 @media (min-width: 40rem){
     .name_container{
-    font-size: 6em;
+        font-size: 6em;
+        line-height: 7rem;
     }
 }

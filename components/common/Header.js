@@ -16,12 +16,12 @@ const Header = () => {
           <Link href="/">
             <a className={styles.brand}>AD</a>
           </Link>
-          <div className={isActive ? styles.active : styles.hamburger} onClick={mobileMenu}>
+          <div className={isActive === true ? styles.active : styles.hamburger} onClick={mobileMenu}>
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
           </div>
-          <nav className={isActive ? styles.active_nav_container : styles.nav_container} onClick={mobileMenu}>
+          <nav className={isActive === true ? styles.active_nav_container : styles.nav_container} onClick={mobileMenu}>
             <ul className={styles.menu_container}>
               <li className={styles.nav__item}>
                 <Link href="#home"><a className={styles.nav_text}>HOME</a></Link>
