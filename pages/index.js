@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import { About, Banner } from "../components/home";
 import styles from "../styles/Home.module.css";
 import ProjectList from "../components/home/ProjectList";
@@ -16,8 +14,8 @@ export default function Home() {
         <title>Alfredo Dominguez</title>
         <meta name="Alfredo Dominguez " content="Web Developer" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
       </Head>
       <Banner />
       <About />

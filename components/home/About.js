@@ -6,7 +6,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 const About = () => {
   return (
     <>
-      <h2 className={styles.about_container}>
+      <h2 id="about" className={styles.about_container}>
         ABOUT
         <span className={styles.about_inner}>ABOUT</span>
       </h2>

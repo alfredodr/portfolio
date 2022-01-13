@@ -24,7 +24,7 @@ const Header = () => {
           <nav className={isActive === true ? styles.active_nav_container : styles.nav_container} onClick={mobileMenu}>
             <ul className={styles.menu_container}>
               <li className={styles.nav__item}>
-                <Link href="#home"><a className={styles.nav_text}>HOME</a></Link>
+                <Link href="/"><a className={styles.nav_text}>HOME</a></Link>
               </li>
               <li className={styles.nav__item}>
                 <Link href="#about"><a className={styles.nav_text}>ABOUT</a></Link>
