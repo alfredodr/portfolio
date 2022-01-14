@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
-  const response = await fetch(`http://localhost:3000/api/projects/${params.id}`);//extract the id paramter from the url
+  const response = await fetch(`http://localhost:3000/api/projects/${params.id}`);//extract the id parameter from the url
   const data = await response.json();
 
   return {
