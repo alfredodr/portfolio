@@ -1,6 +1,6 @@
 import { projects } from "../../../lib/projects";
 
-export default function hander(req, res) {
+export default function handler(req, res) {
     const { projectId } = req.query;
     const project = projects.find(project => project.id === parseInt(projectId)); //find a project whos id is equal to the id from the url converted to
     //number

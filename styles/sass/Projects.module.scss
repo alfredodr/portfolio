@@ -1,7 +1,6 @@
 @import "_variables.scss";
 
 .projects{
-    position:relative;
     font-size: 2rem;
     margin-top: 5rem;
     behavior: "smooth"; 
@@ -66,9 +65,20 @@
         display: grid;
         align-items: center;
         justify-content: center;
-        position: relative; 
         grid-gap: 1rem;
     }
+}
+
+.img_dtls_container{
+    position: relative;
+}
+
+.detail1,
+.detail2,
+.detail3{
+    width: 100%;
+    height: 3rem;
+    //bottom:0;
 }
 
 .detail1:hover,
@@ -122,24 +132,9 @@
 
     .detail1,
     .detail2,
-    .detail3{
-        width: 100%;
-        height: 5%;
+    .detail3{        
+        height: 3rem;
     }
-
-    .detail1{
-        top: 12rem;
-    }
-
-    
-    .detail2{
-        top: 31rem;
-    }
-
-    .detail3{
-        bottom: 5rem;
-    }
-
 }
 
 /*desktop responsive*/
@@ -152,19 +147,10 @@
 
     .detail1,
     .detail2,
-    .detail3{   
-        width: 47%;
-        height: 10%;
-        opacity: 0;
-    }
-
-    .detail1,
-    .detail2{
-        top: 22rem;
-    }
-
     .detail3{
-        bottom: 2rem;
+        opacity: 0;
+        top: 22rem;
+        height: 5rem;
     }
 
     .project1:hover{

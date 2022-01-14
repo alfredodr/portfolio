@@ -27,13 +27,13 @@ const Header = () => {
                 <Link href="/"><a className={styles.nav_text}>HOME</a></Link>
               </li>
               <li className={styles.nav__item}>
-                <Link href="#about"><a className={styles.nav_text}>ABOUT</a></Link>
+                <Link href="/#about"><a className={styles.nav_text}>ABOUT</a></Link>
               </li>
               <li className={styles.nav__item}>
-                <Link href="#projects"><a className={styles.nav_text}>PROJECTS</a></Link>
+                <Link href="/#projects"><a className={styles.nav_text}>PROJECTS</a></Link>
               </li>
               <li className={styles.nav__item}>
-                <Link href="#contact"><a className={styles.nav_text}>CONTACT</a></Link>
+                <Link href="/#contact"><a className={styles.nav_text}>CONTACT</a></Link>
               </li>
             </ul>
           </nav>

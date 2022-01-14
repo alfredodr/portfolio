@@ -40,4 +40,8 @@ export async function getStaticProps(context) {
   }
 }
 
-//here use getStaticPath and getStaticProp to get the data
+//getStaticPath and getStaticProp to get the data are only available inside the page folder
+//fallback:false paths returned by getStaticPaths will be rendered to HTML at build time by getStaticProps. Any paths not retunred by getStaticPaths
+//will return a 404 page. Ideal for an app with few path and new paths are not added often
+
+//fallback:true paths returned by getStaticPaths will be rendered to HTML at build time by getStaticProps.

@@ -10,6 +10,7 @@
   "dependencies": {
     "@emotion/styled": "^11.6.0",
     "@hookform/resolvers": "^2.8.5",
+    "@sendgrid/mail": "^7.6.0",
     "install": "^0.13.0",
     "next": "12.0.7",
     "npm": "^8.3.0",

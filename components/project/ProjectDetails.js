@@ -10,86 +10,170 @@ import { DiWordpress } from "react-icons/di";
 import Link from "next/link";
 import { AiOutlineEye } from "react-icons/ai";
 import { DiReact } from "react-icons/di";
+import { AiFillGithub } from "react-icons/ai";
 
 const ProjectDetails = ({ data }) => {
   const { id, name, description } = data;
 
-  let stacks=(id)=>{
-    if(id===1){
+  let stacks = (id) => {
+    if (id === 1) {
       return (
         <div className={styles.stacks_container}>
           <div className={styles.icon_container}>
             <DiHtml5 style={{ fontSize: 40 }} />
             <span>HTML</span>
-          </div>                 
+          </div>
           <div className={styles.icon_container}>
             <DiCss3 style={{ fontSize: 40 }} />
             <span>CSS</span>
-          </div>                  
+          </div>
           <div className={styles.icon_container}>
             <DiSass style={{ fontSize: 40 }} />
             <span>SASS</span>
-          </div>          
+          </div>
           <div className={styles.icon_container}>
             <DiJavascript style={{ fontSize: 40 }} />
             <span>Javascript</span>
-          </div>       
+          </div>
           <div className={styles.icon_container}>
             <DiWordpress style={{ fontSize: 40 }} />
             <span>Wordpress</span>
-          </div>          
+          </div>
         </div>
       )
-    }else if(id===2){
+    } else if (id === 2) {
       return (
         <div className={styles.stacks_container}>
-         <div className={styles.icon_container}>
+          <div className={styles.icon_container}>
             <DiHtml5 style={{ fontSize: 40 }} />
             <span>HTML</span>
-          </div>                  
+          </div>
           <div className={styles.icon_container}>
             <DiCss3 style={{ fontSize: 40 }} />
             <span>CSS</span>
-          </div>       
+          </div>
           <div className={styles.icon_container}>
             <DiJavascript style={{ fontSize: 40 }} />
             <span>Javascript</span>
-          </div>        
+          </div>
           <div className={styles.icon_container}>
-            <DiReact style={{ fontSize: 40 }}/>
+            <DiReact style={{ fontSize: 40 }} />
             <span>React</span>
-          </div>          
+          </div>
         </div>
-      ) 
-    }else if(id===3){
+      )
+    } else if (id === 3) {
       return (
         <div className={styles.stacks_container}>
           <div className={styles.icon_container}>
-          <DiHtml5 style={{ fontSize: 40 }} />
-          <span>HTML</span>
+            <DiHtml5 style={{ fontSize: 40 }} />
+            <span>HTML</span>
           </div>
           <div className={styles.icon_container}>
-          <DiCss3 style={{ fontSize: 40 }} />
-          <span>CSS</span>
+            <DiCss3 style={{ fontSize: 40 }} />
+            <span>CSS</span>
           </div>
           <div className={styles.icon_container}>
-          <DiSass style={{ fontSize: 40 }} />
-          <span>SASS</span>
+            <DiSass style={{ fontSize: 40 }} />
+            <span>SASS</span>
           </div>
           <div className={styles.icon_container}>
-          <DiJavascript style={{ fontSize: 40 }} />
-          <span>Javascript</span>
+            <DiJavascript style={{ fontSize: 40 }} />
+            <span>Javascript</span>
           </div>
           <div className={styles.icon_container}>
-          <DiReact style={{ fontSize: 40 }}/>
-          <span>React</span>
+            <DiReact style={{ fontSize: 40 }} />
+            <span>React</span>
           </div>
           <div className={styles.icon_container}>
-          <i className="devicon-nextjs-original colored" style={{fontSize: 40, margin:"20px"}}/>
-          <span>Next.js</span>
-          </div>       
+            <i className="devicon-nextjs-original colored" style={{ fontSize: 40, margin: "20px" }} />
+            <span>Next.js</span>
+          </div>
         </div>
-      ) 
+      )
+    }
+  }
+
+  let gitgub = (id) => {
+    if (id === 1) {
+      return (
+        <button className={styles.project_button_container}>
+          <AiOutlineEye className={styles.view_icon} size="1.4rem" />
+          <Link
+            href={"https://www.univistainsurance.com/location/univista-insurance-hialeah-fl-33010-2/"}
+            passHref
+          >
+            <a
+              className={styles.view_text}
+              target="_blank"
+            >
+              View Project
+            </a>
+          </Link>
+        </button>
+      )
+    } else if (id === 2) {
+      return (
+        <>
+          <div className={styles.buttons}>
+            <button className={styles.project_button_container}>
+              <AiOutlineEye className={styles.view_icon} size="1.4rem" />
+              <Link
+                href={"/"}
+                passHref
+              >
+                <a
+                  className={styles.view_text}
+                  target="_blank"
+                >View Project</a>
+              </Link>
+            </button>
+            <button className={styles.github_button_container}>
+              <AiFillGithub className={styles.view_icon} size="1.4rem" />
+              <Link
+                href={"/"}
+                passHref
+              >
+                <a
+                  className={styles.view_text}
+                  target="_blank"
+                >View Github</a>
+              </Link>
+            </button>
+          </div>
+        </>
+      )
+    } else if (id === 3) {
+      return (
+        <>
+          <div className={styles.buttons}>
+            <button className={styles.project_button_container}>
+              <AiOutlineEye className={styles.view_icon} size="1.4rem" />
+              <Link
+                href={"/"}
+                passHref
+              >
+                <a
+                  className={styles.view_text}
+                  target="_blank"
+                >View Project</a>
+              </Link>
+            </button>
+            <button className={styles.github_button_container}>
+              <AiFillGithub className={styles.view_icon} size="1.4rem" />
+              <Link
+                href={"/"}
+                passHref
+              >
+                <a
+                  className={styles.view_text}
+                  target="_blank"
+                >View Github</a>
+              </Link>
+            </button>
+          </div>
+        </>
+      )
     }
   }
 
@@ -113,21 +197,7 @@ const ProjectDetails = ({ data }) => {
         {stacks(id)}
       </div>
       <p className={styles.description}>{description}</p>
-      <button className={styles.project_button_container}>
-        <AiOutlineEye className={styles.view_icon} size="1.4rem" />
-        <Link
-          href={
-            id === 1 ? "https://www.univistainsurance.com/location/univista-insurance-hialeah-fl-33010-2/" :
-              id === 2 ? "/" :
-                id === 3 ? "/" : null}
-          target={"blank"}
-          passHref
-        >
-          <a
-            className={styles.view_text}
-          >View Project</a>
-        </Link>
-      </button>
+      {gitgub(id)}
     </section>
   )
 };
