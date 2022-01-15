@@ -1,4 +1,5 @@
 import { ProjectDetails, CoverImage } from "../../components/project";
+import { projects } from "../../lib/projects";
 
 function project({ project }) {
   return (
@@ -30,9 +31,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
-  const response = await fetch(`http://localhost:3000/api/projects/${params.id}`);//extract the id parameter from the url
-  const data = await response.json();
-
+  //const response = await fetch(`http://localhost:3000/api/projects/${params.id}`);//extract the id parameter from the url
+  //const data = await response.json();
+  const data=projects.find(project=>project.id===parseInt(params.id));
+  
   return {
     props: {
       project: data
@@ -40,8 +42,3 @@ export async function getStaticProps(context) {
   }
 }
 
-//getStaticPath and getStaticProp to get the data are only available inside the page folder
-//fallback:false paths returned by getStaticPaths will be rendered to HTML at build time by getStaticProps. Any paths not retunred by getStaticPaths
-//will return a 404 page. Ideal for an app with few path and new paths are not added often
-
-//fallback:true paths returned by getStaticPaths will be rendered to HTML at build time by getStaticProps.
