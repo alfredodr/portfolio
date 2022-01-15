@@ -45,7 +45,7 @@ const Contact = () => {
           type="text"
           name="fullName"
           {...register('fullName')}
-          placeholder="  Full Name..."
+          placeholder="Full Name..."
           className={styles.input}
         />
         <p className={styles.error}> {errors.fullName?.message} </p>
@@ -54,7 +54,7 @@ const Contact = () => {
           type="text"
           name="email"
           {...register('email')}
-          placeholder="  Email Address..."
+          placeholder="Email Address..."
           className={styles.input}
         />
         <p className={styles.error}> {errors.email?.message} </p>
@@ -63,7 +63,7 @@ const Contact = () => {
           type="text"
           name="subject"
           {...register('subject')}
-          placeholder="  Subject..."
+          placeholder="Subject..."
           className={styles.input}
         />
         <p className={styles.error}> {errors.subject?.message} </p>
@@ -73,7 +73,7 @@ const Contact = () => {
           name="message"
           {...register('message')}
           className={styles.message}
-          placeholder="  Your Message..."
+          placeholder="Your Message..."
         />
         <p className={styles.error}> {errors.message?.message} </p>
 

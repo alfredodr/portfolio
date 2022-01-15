@@ -15,8 +15,8 @@ export default function handler(req, res) {
             Subject:${subject}\r\n
         `;
         const data = {
-            to: "support@fishingshirtsnow.com",
-            from: "support@fishingshirtsnow.com",
+            to: "support@alfredojdominguez.com",
+            from: "support@alfredojdominguez.com",
             subject: "new portfolio contact form message!",
             text: msg,
             html: msg.replace(/\r\n/g, "<br>")
