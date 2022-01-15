@@ -14,12 +14,12 @@ const schema = yup.object().shape({
 });
 
 const Contact = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema),
   });
 
   const submitForm = async (data) => {
-    //console.log(data);
+    //console.log({data});
     const response = await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify({ data }),
@@ -29,6 +29,7 @@ const Contact = () => {
     });
     const message = await response.json()
     console.log(message)
+    reset();
   };//JSON.stringify({data}) where key is the same as the value, thats why we use the shorthand data
 
   return (
