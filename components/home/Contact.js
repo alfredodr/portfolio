@@ -4,7 +4,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { MdDoneOutline } from "react-icons/md";
 import { MdClear } from "react-icons/md";
-import { array } from "yup";
 
 const schema = yup.object().shape({
   fullName: yup.string().required("Full Name is required"),
@@ -19,7 +18,6 @@ const Contact = () => {
   });
 
   const submitForm = async (data) => {
-    //console.log({data});
     const response = await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify({ data }),
@@ -28,9 +26,8 @@ const Contact = () => {
       }
     });
     const message = await response.json()
-    console.log(message)
     reset();
-  };//JSON.stringify({data}) where key is the same as the value, thats why we use the shorthand data
+  };
 
   return (
     <>

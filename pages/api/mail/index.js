@@ -1,7 +1,6 @@
 import mail from '@sendgrid/mail';
 
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default function handler(req, res) {
     if (req.method === "GET") {
@@ -33,10 +32,3 @@ export default function handler(req, res) {
 
 //maps to route http://localhost:3000/api/mail
 
-// const newMessage = {
-//     id: Date.now(),
-//     email: email,
-//     fullName: fullName,
-//     message: message,
-//     subject: subject
-// }
