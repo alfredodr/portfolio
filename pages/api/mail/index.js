@@ -3,9 +3,6 @@ import mail from '@sendgrid/mail';
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default function handler(req, res) {
-    if (req.method === "GET") {
-        res.status(200).json({ status: "Ok" });//send back the data in json format to the browser 
-    } else if (req.method === "POST") {
         const messageData = req.body.data;
         const { email, fullName, message, subject } = messageData;
         const msg = `
@@ -24,8 +21,7 @@ export default function handler(req, res) {
 
         mail.send(data);
 
-        res.status(201).json(data);
-    }
+        res.status(200).json({ status: "Ok" });
 }
 
 //messageData comes from the the value of the key named body in the front end

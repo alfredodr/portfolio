@@ -19,18 +19,17 @@ const Contact = () => {
 
   const submitForm = async (data) => {
     try{
-      const response = await fetch("/api/mail", {
+      fetch("/api/mail", {
         method: "POST",
         body: JSON.stringify({ data }),
         headers: {
           "Content-Type": "application/json"
         }
       });
-      const message = await response.json()
+      reset();
     }catch(e){
       console.log(e);
     }
-    reset();
   };
 
   return (
