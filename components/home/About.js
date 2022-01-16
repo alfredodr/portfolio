@@ -11,8 +11,9 @@ const About = () => {
         <span className={styles.about_inner}>ABOUT</span>
       </h2>
       <hr className={styles.line_break} />
-      <p className={styles.description}>I am a Web Developer, passionate about my creating applications from start to finish, and help businesses drive
-        revenue and grow. I like to stay up to date with the industry trends and continue learning and harnessing my skills.
+      <p className={styles.description}>I am a Web Developer, passionate about creating applications from start to finish 
+        and helping businesses drive revenue and growth. I like to stay up to date with the industry trends and continue 
+        learning and harnessing my skills.
       </p>
       <div className={styles.icons_container}>
         <a href="https://github.com/alfredodr" ><AiFillGithub className={styles.icon} />Github</a>
