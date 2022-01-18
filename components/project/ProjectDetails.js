@@ -94,7 +94,7 @@ const ProjectDetails = ({ data }) => {
     }
   }
 
-  let gitgub = (id) => {
+  let externalLinks = (id) => {
     if (id === 1) {
       return (
         <button className={styles.project_button_container}>
@@ -119,7 +119,7 @@ const ProjectDetails = ({ data }) => {
             <button className={styles.project_button_container}>
               <AiOutlineEye className={styles.view_icon} size="1.4rem" />
               <Link
-                href={"/"}
+                href={"https://breaking-bad-quotes-lime.vercel.app/"}
                 passHref
               >
                 <a
@@ -131,7 +131,7 @@ const ProjectDetails = ({ data }) => {
             <button className={styles.github_button_container}>
               <AiFillGithub className={styles.view_icon} size="1.4rem" />
               <Link
-                href={"/"}
+                href={"https://github.com/alfredodr/breaking-bad-quotes"}
                 passHref
               >
                 <a
@@ -162,7 +162,7 @@ const ProjectDetails = ({ data }) => {
             <button className={styles.github_button_container}>
               <AiFillGithub className={styles.view_icon} size="1.4rem" />
               <Link
-                href={"/"}
+                href={"https://github.com/alfredodr/portfolio"}
                 passHref
               >
                 <a
@@ -197,7 +197,7 @@ const ProjectDetails = ({ data }) => {
         {stacks(id)}
       </div>
       <p className={styles.description}>{description}</p>
-      {gitgub(id)}
+      {externalLinks(id)}
     </section>
   )
 };
