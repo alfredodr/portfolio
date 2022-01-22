@@ -1,10 +1,10 @@
 @import "_variables.scss";
 
 .header_container{
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
-    //justify-items: center;
     top: 0;
     z-index: 5;
     background-color: $white;
@@ -42,7 +42,7 @@
 
 /*mobile responsive*/
 @media (max-width: 40rem){ 
-     .nav_container{
+    .nav_container{
         display:none;
     }
 
@@ -88,10 +88,6 @@
 
 /*desktop responsive*/
 @media (min-width: 40rem){
-    .header_container{
-        position: fixed;
-    }
-
     .brand_menu_container{
         display: flex;
         flex-direction: row;

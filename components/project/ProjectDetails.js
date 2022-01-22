@@ -180,8 +180,8 @@ const ProjectDetails = ({ data }) => {
   return (
     <section className={styles.detail_container}>
       <h1 className={styles.intro_container}>
-        Project {id} {name}
-        <span className={styles.intro_inner}>Project {id} {name}</span>
+        {name}
+        <span className={styles.intro_inner}>{name}</span>
       </h1>
       <hr className={styles.line_break} />
       <h2 className={styles.intro}>Details</h2>
