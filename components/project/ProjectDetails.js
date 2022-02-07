@@ -11,9 +11,11 @@ import Link from "next/link";
 import { AiOutlineEye } from "react-icons/ai";
 import { DiReact } from "react-icons/di";
 import { AiFillGithub } from "react-icons/ai";
+import { SiNextdotjs } from "react-icons/si";
+import { SiMaterialui } from "react-icons/si";
 
 const ProjectDetails = ({ data }) => {
-  const { id, name, description } = data;
+  const { id, name, description, category, client } = data;
 
   let stacks = (id) => {
     if (id === 1) {
@@ -40,7 +42,7 @@ const ProjectDetails = ({ data }) => {
             <span>Wordpress</span>
           </div>
         </div>
-      )
+      );
     } else if (id === 2) {
       return (
         <div className={styles.stacks_container}>
@@ -60,8 +62,12 @@ const ProjectDetails = ({ data }) => {
             <DiReact style={{ fontSize: 40 }} />
             <span>React</span>
           </div>
+          <div className={styles.icon_container}>
+            <SiMaterialui style={{ fontSize: 40 }} />
+            <span>Material UI</span>
+          </div>
         </div>
-      )
+      );
     } else if (id === 3) {
       return (
         <div className={styles.stacks_container}>
@@ -86,13 +92,13 @@ const ProjectDetails = ({ data }) => {
             <span>React</span>
           </div>
           <div className={styles.icon_container}>
-            <i className="devicon-nextjs-original colored" style={{ fontSize: 40, margin: "20px" }} />
+            <SiNextdotjs style={{ fontSize: 40 }} />
             <span>Next.js</span>
           </div>
         </div>
-      )
+      );
     }
-  }
+  };
 
   let externalLinks = (id) => {
     if (id === 1) {
@@ -100,18 +106,17 @@ const ProjectDetails = ({ data }) => {
         <button className={styles.project_button_container}>
           <AiOutlineEye className={styles.view_icon} size="1.4rem" />
           <Link
-            href={"https://www.univistainsurance.com/location/univista-insurance-hialeah-fl-33010-2/"}
+            href={
+              "https://www.univistainsurance.com/location/univista-insurance-hialeah-fl-33010-2/"
+            }
             passHref
           >
-            <a
-              className={styles.view_text}
-              target="_blank"
-            >
+            <a className={styles.view_text} target="_blank">
               View Project
             </a>
           </Link>
         </button>
-      )
+      );
     } else if (id === 2) {
       return (
         <>
@@ -122,10 +127,9 @@ const ProjectDetails = ({ data }) => {
                 href={"https://breaking-bad-quotes-lime.vercel.app/"}
                 passHref
               >
-                <a
-                  className={styles.view_text}
-                  target="_blank"
-                >View Project</a>
+                <a className={styles.view_text} target="_blank">
+                  View Project
+                </a>
               </Link>
             </button>
             <button className={styles.github_button_container}>
@@ -134,48 +138,39 @@ const ProjectDetails = ({ data }) => {
                 href={"https://github.com/alfredodr/breaking-bad-quotes"}
                 passHref
               >
-                <a
-                  className={styles.view_text}
-                  target="_blank"
-                >View Github</a>
+                <a className={styles.view_text} target="_blank">
+                  View Github
+                </a>
               </Link>
             </button>
           </div>
         </>
-      )
+      );
     } else if (id === 3) {
       return (
         <>
           <div className={styles.buttons}>
             <button className={styles.project_button_container}>
               <AiOutlineEye className={styles.view_icon} size="1.4rem" />
-              <Link
-                href={"/"}
-                passHref
-              >
-                <a
-                  className={styles.view_text}
-                  target="_blank"
-                >View Project</a>
+              <Link href={"/"} passHref>
+                <a className={styles.view_text} target="_blank">
+                  View Project
+                </a>
               </Link>
             </button>
             <button className={styles.github_button_container}>
               <AiFillGithub className={styles.view_icon} size="1.4rem" />
-              <Link
-                href={"https://github.com/alfredodr/portfolio"}
-                passHref
-              >
-                <a
-                  className={styles.view_text}
-                  target="_blank"
-                >View Github</a>
+              <Link href={"https://github.com/alfredodr/portfolio"} passHref>
+                <a className={styles.view_text} target="_blank">
+                  View Github
+                </a>
               </Link>
             </button>
           </div>
         </>
-      )
+      );
     }
-  }
+  };
 
   return (
     <section className={styles.detail_container}>
@@ -185,22 +180,47 @@ const ProjectDetails = ({ data }) => {
       </h1>
       <hr className={styles.line_break} />
       <h2 className={styles.intro}>Details</h2>
-      <div className={styles.info_container}>
-        <BiCategory style={{ fontSize: 30 }} />
-        <span>Category:</span>
-        <span>HTML, CSS, JS, Wordpress</span>
-        <BiUserCircle style={{ fontSize: 30 }} />
-        <span>Client:</span>
-        <span>Univista Insurance</span>
-        <FaLaptopCode style={{ fontSize: 30 }} />
-        <span>Stacks Used:</span>
-        {stacks(id)}
-      </div>
+      <ul className={styles.list_container}>
+        <li className={styles.list_Item}>
+          <BiCategory style={{ fontSize: 30 }} />
+          <h3 className={styles.list_Item_Details}>Category:</h3>
+          <p>{category}</p>
+        </li>
+        <li className={styles.list_Item}>
+          <BiUserCircle style={{ fontSize: 30 }} />
+          <h3 className={styles.list_Item_Details}>Client:</h3>
+          <p>{client}</p>
+        </li>
+        <li className={styles.list_Item}>
+          <FaLaptopCode style={{ fontSize: 30 }} />
+          <h3 className={styles.list_Item_Details}>Stacks Used:</h3>
+        </li>
+        <li className={styles.list_Item}>
+          <p className={styles.stacks}>{stacks(id)}</p>
+        </li>
+      </ul>
       <p className={styles.description}>{description}</p>
       {externalLinks(id)}
     </section>
-  )
+  );
 };
 
 export default ProjectDetails;
 
+//
+//<div className={styles}>
+//        <BiCategory style={{ fontSize: 30 }} />
+//        <span>Category:</span>
+//        <span>{category}</span>
+//        <BiUserCircle style={{ fontSize: 30 }} />
+//        <span>Client:</span>
+//        <span>{client}</span>
+//        <FaLaptopCode style={{ fontSize: 30 }} />
+//        <span>Stacks Used:</span>
+//        {stacks(id)}
+//      </div>
+
+//<i
+//              className="devicon-nextjs-original colored"
+//              style={{ fontSize: 40, margin: "20px" }}
+//            />

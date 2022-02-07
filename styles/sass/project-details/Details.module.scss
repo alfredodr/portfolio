@@ -1,121 +1,112 @@
 @import "../variables";
 
-.intro_container{
-    position:relative;
-    font-size: 2rem;
-    margin-top: 8rem;
+.intro_container {
+  position: relative;
+  font-size: 2rem;
+  margin-top: 8rem;
 }
 
-.intro_inner{
-    font-size: 4.7rem;
-    color:$white;
-    text-shadow: 2px 2px 6px $lightgray;
-    position: absolute;
-    bottom:-2rem;
-    left:0;
-    z-index: -1;
+.intro_inner {
+  font-size: 4.7rem;
+  color: $white;
+  text-shadow: 2px 2px 6px $lightgray;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  z-index: -1;
 }
 
-.line_break{
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+.line_break {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 
-.description{
-    line-height: 2rem;
+.description {
+  line-height: 2rem;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-@supports(display: grid){
-    .info_container{
-        display: grid;
-        align-items: center;
-        //grid-gap: 0.8rem;
-        margin: 5rem 0;
-    }
-
-    .stacks_container{
-        display: grid;
-        align-items: center;
-        justify-content: center;
-    }
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .project_button_container,
-.github_button_container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: $black;
-    font-size: 1rem;
-    border-radius: 3.125rem;
-    width: 10rem;
-    height: 3rem;
-    margin: 2rem 0;
+.github_button_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: $black;
+  font-size: 1rem;
+  border-radius: 3.125rem;
+  width: 10rem;
+  height: 3rem;
+  margin: 2rem 0;
 }
 
-.project_button_container:hover{
-    background-color: $white;
-    .view_icon,
-    .view_text{
-        color: $black;
-    }
+.project_button_container:hover {
+  background-color: $white;
+  .view_icon,
+  .view_text {
+    color: $black;
+  }
 }
 
-.project_button_container:hover{
-    background-color: $white;
-    .view_icon,
-    .view_text{
-        color: $black;
-    }
+.project_button_container:hover {
+  background-color: $white;
+  .view_icon,
+  .view_text {
+    color: $black;
+  }
 }
 
 .view_icon,
-.view_text{
-    color: $white;
+.view_text {
+  color: $white;
 }
 
-.github_button_container{
-    margin-left: 1rem;
+.github_button_container {
+  margin-left: 1rem;
 }
 
-.icon_container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.icon_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.list_container {
+  margin: 2rem 0;
+}
+
+.list_Item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.list_Item_Details {
+  margin: 1rem 1rem 1rem 2rem;
+}
+
+.stacks_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /*mobile responsive*/
-@media (max-width: 40rem){
-    @supports(display: grid){
-        .intro_inner{
-            display: none;
-        }
-
-        .info_container{
-            grid-template-columns: repeat(3, 32%);
-        }
-    }
-}
-
-/*desktop responsive*/
-@media (min-width: 40rem){
-    @supports(display: grid){
-        .info_container{
-            grid-template-columns: repeat(3, 25%);
-        }
-
-        .stacks_container{
-            grid-template-columns: repeat(3, 40%);
-            grid-template-rows: repeat(2, 70%);
-            grid-gap: 1rem;
-        }
-    }
-}
+//@media (max-width: 40rem) {
+//
+//}
+//
+///*desktop responsive*/
+//@media (min-width: 40rem) {
+//
+//}
